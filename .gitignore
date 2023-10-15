@@ -1,9 +1,8 @@
 # compiled output
 /dist
 /node_modules
-/.pnpm-store
 
-# eniroment variables
+# eviroment variable
 .env
 
 # Logs
