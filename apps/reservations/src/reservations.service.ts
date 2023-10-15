@@ -5,7 +5,9 @@ import { ReservationsRepository } from './reservations.repository';
 
 @Injectable()
 export class ReservationsService {
-  constructor(private readonly reservationsRepository: ReservationsRepository) {}
+  constructor(
+    private readonly reservationsRepository: ReservationsRepository,
+  ) {}
   create(createReservationDto: CreateReservationDto) {
     return this.reservationsRepository.create({
       ...createReservationDto,
@@ -25,7 +27,7 @@ export class ReservationsService {
   update(_id: string, updateReservationDto: UpdateReservationDto) {
     return this.reservationsRepository.findOneAndUpdate(
       { _id },
-      { $set : updateReservationDto }
+      { $set: updateReservationDto },
     );
   }
 
