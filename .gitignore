@@ -1,9 +1,13 @@
 # compiled output
 /dist
 /node_modules
+# /.pnpm-store
 
 # eviroment variable
 .env
+
+# gitignore
+.gitignore
 
 # Logs
 logs
