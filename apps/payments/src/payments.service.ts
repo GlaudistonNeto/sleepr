@@ -23,6 +23,15 @@ export class PaymentsService {
 
     const paymentIntent = await this.stripe.paymentIntents.create({
       amount: amount * 100,
+<<<<<<< Updated upstream
+=======
+      automatic_payment_methods: {
+        enabled: true,
+        allow_redirects: 'never',
+      },
+      confirm: true,
+      payment_method: 'pm_card_visa',
+>>>>>>> Stashed changes
       currency: 'usd',
       payment_method: paymentMethod.id,
       confirm: true,
